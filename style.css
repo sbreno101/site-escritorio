@@ -26,17 +26,22 @@
         text-align: center;
     }
 
+    header img {
+        margin-bottom: 15px;
+    }
+
     nav {
         display: flex;
-        flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
         width: 100%;
         gap: 10px;
     }
 
     nav > a {
         display: inline-block;
-        padding: 12px;
+        padding: 10px, 15px;
+        font-size: 1em;
         text-align: center;
     }
 }
@@ -100,6 +105,13 @@
     .botao-whatsapp {
         font-size: 1.1em;
         padding: 12px 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container-problemas {
+        flex-direction: column;
+        gap: 20px;
     }
 }
 
@@ -234,7 +246,7 @@ aside {
     padding: 20px;
     border-radius: 15px;
     color: black;
-    background-color: #458cc3;
+    background-color: #f0f0f0;
     margin-bottom: 20px;
 }
 
@@ -242,6 +254,24 @@ aside > h2 {
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.container-problemas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 300px;
+}
+
+.separador {
+    width: 4px;
+    background: linear-gradient(to bottom, #333, #777);
+    border-radius: 5px;
 }
 
 .h3-container {
