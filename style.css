@@ -20,27 +20,29 @@
 
 @media screen and (max-width: 900px) {
     header {
-        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 15px 5%;
     }
 
     header img {
-        margin-bottom: 15px;
+        width: 140px;
     }
 
     nav {
         display: flex;
-        justify-content: center;
+        flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
+        margin-top: 10px;
         gap: 10px;
     }
 
     nav > a {
-        display: inline-block;
-        padding: 10px, 15px;
+        white-space: nowrap;
+        padding: 10px 15px;
         font-size: 1em;
         text-align: center;
     }
