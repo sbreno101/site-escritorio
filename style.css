@@ -1,0 +1,545 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Krona+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --cor0: #010626;
+    --cor1: #022859;
+    --cor2: #034C8C;
+    --cor3: #2481A6;
+    --cor4: #ffffff;
+    --cor5: #000000;
+    --cor6: #106fb6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5%;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+header img {
+    width: 160px;
+    height: auto;
+    max-width: 100%;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
+}
+
+nav > a {
+    color: var(--cor6);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    font-size: 1.2em;
+}
+
+nav > a:hover {
+    background-color: var(--cor0);
+    color: white;
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        margin-top: 5px;
+    }
+
+    nav > a {
+        padding: 8px;
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav > a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.h3-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.h3-container i {
+    font-size: 24px;
+    color: #333;
+}
+
+.h3-container h3 {
+    font-size: 1.5em;
+    text-align: left;
+    margin: 0;
+}
+
+.topico-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.topico {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topico i {
+    font-size: 22px;
+    color: #555;
+}
+
+.topico-content {
+    flex: 1;
+}
+
+.topico h4 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.topico p {
+    font-size: 1.1em;
+    text-align: justify;
+    margin-top: 5px;
+}
+
+.h3-container h3 {
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+    font-size: clamp(1.3em, 1vw, 1.5em);
+    margin: 0;
+    padding: 10px 20px;
+    display: inline-block;
+    background: linear-gradient(to right, #106fb6, transparent);
+    border-radius: 8px;
+}
+
+@media screen and (max-width: 700px) {
+    .topico-container {
+        flex-direction: column;
+    }
+
+    .topico {
+        width: 100%;
+    }
+}
+
+.lineartransparente {
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    padding: 5px;
+    background-image: linear-gradient(to right, var(--cor6), transparent);
+    border-radius: 15px;
+}
+
+.hero {
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("arquivos/imagemdeiniciodesfocada.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-size: 3em;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.hero p {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-size: 1.8em;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    margin-top: 10px;
+}
+
+.whatsapp-btn {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe57;
+}
+
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.conteudo {
+    background-color: var(--cor1);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    color: black;
+}
+
+article {
+    font-family: "Roboto";
+    margin-bottom: 60px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container p {
+    width: 55%;
+    min-width: 250px;
+    font-size: 1.2em;
+    text-align: justify;
+    margin-right: 20px;
+    text-indent: 10px;
+    flex: 1;
+}
+
+.container img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+}
+
+.centro {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.espaçamento {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.advogado {
+    text-align: center;
+    width: 30%;
+}
+
+.advogado img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.advogado p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: black;
+}
+
+aside {
+    font-family: "Roboto", sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    color: black;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+aside > h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* div class contato */
+
+.contato-advogado {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background-color: var(--cor4);
+    color: var(--cor5);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contato-texto h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.contato-texto p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.botao-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.botao-whatsapp i {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.botao-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+    .contato-advogado {
+        padding: 20px;
+    }
+
+    .botao-whatsapp {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+}
+
+/* section class contato */
+
+.contato {
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 1000px;
+    color: black;
+}
+
+.info {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 15px;
+    text-align: left;
+}
+
+.info h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    text-indent: 15px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.info-item i {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.info-item strong {
+    font-size: 1.2em;
+}
+
+.info-item p {
+    font-size: 1.1em;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+.mapa {
+    flex: 1.5;
+    min-width: 400px;
+    max-width: 600px;
+    height: 350px;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--cor6);
+    color: white;
+    padding: 30px 5%;
+    text-align: center;
+}
+
+.footer-container {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer-info {
+    text-align: left;
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+}
+
+.footer-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.footer-info p {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.footer-info i {
+    margin-right: 8px;
+}
+
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-social h3 {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1em;
+    margin: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-social a i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.footer-social a:hover {
+    color: #f1c40f;
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.9em;
+}
