@@ -18,6 +18,14 @@
     box-sizing: border-box;
 }
 
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
 body {
     color: black;
     background-color: white;
@@ -48,18 +56,19 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    white-space: nowrap;
+    gap: 15px;
+    flex-wrap: nowrap;
 }
 
 nav > a {
     color: var(--cor6);
-    padding: 10px;
+    padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
     transition-duration: 0.5s;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    white-space: nowrap;
 }
 
 nav > a:hover {
@@ -67,19 +76,53 @@ nav > a:hover {
     color: white;
 }
 
+.hero {
+    font-family: "Roboto", sans-serif;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url("arquivos/imagemdeiniciodesfocada.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-size: 3em;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    white-space: nowrap;
+}
+
+.hero p {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-size: 1.8em;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 900px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-between;
         padding: 10px 20px;
     }
 
     nav {
-        flex-wrap: wrap;
-        gap: 10px;
-        width: 100%;
+        flex-wrap: nowrap;
+        gap: 8px;
         justify-content: center;
-        margin-top: 5px;
     }
 
     nav > a {
@@ -89,15 +132,77 @@ nav > a:hover {
 }
 
 @media screen and (max-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     nav {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: nowrap;
         gap: 5px;
+        justify-content: center;
     }
 
     nav > a {
-        width: 100%;
-        text-align: center;
+        padding: 6px;
+        font-size: 0.9em;
     }
+
+    .hero h1 {
+        font-size: 2em;
+        white-space: nowrap;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+}
+
+.lineartransparente {
+    color: white;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+    padding: 5px;
+    background-image: linear-gradient(to right, var(--cor6), transparent);
+    border-radius: 15px;
+}
+
+.whatsapp-btn {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe57;
+}
+
+/* aside 1 enfrentando problemas */
+
+aside {
+    font-family: "Roboto", sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    color: black;
+    background-color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+aside > h2 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .h3-container {
@@ -105,6 +210,16 @@ nav > a:hover {
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
+}
+
+.h3-container h3 {
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
+    font-size: clamp(1.3em, 1vw, 1.5em);
+    margin: 0;
+    padding: 10px 20px;
+    display: inline-block;
+    background: linear-gradient(to right, #106fb6, transparent);
+    border-radius: 8px;
 }
 
 .h3-container i {
@@ -155,94 +270,12 @@ nav > a:hover {
     margin-top: 5px;
 }
 
-.h3-container h3 {
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
-    font-size: clamp(1.3em, 1vw, 1.5em);
-    margin: 0;
-    padding: 10px 20px;
-    display: inline-block;
-    background: linear-gradient(to right, #106fb6, transparent);
-    border-radius: 8px;
+article {
+    font-family: "Roboto";
+    margin-bottom: 60px;
 }
 
-@media screen and (max-width: 700px) {
-    .topico-container {
-        flex-direction: column;
-    }
-
-    .topico {
-        width: 100%;
-    }
-}
-
-.lineartransparente {
-    color: white;
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-    margin-bottom: 10px;
-    padding: 5px;
-    background-image: linear-gradient(to right, var(--cor6), transparent);
-    border-radius: 15px;
-}
-
-.hero {
-    font-family: "Roboto", sans-serif;
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background-image: url("arquivos/imagemdeiniciodesfocada.jpg");
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-}
-
-.hero h1 {
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-    font-size: 3em;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 80%;
-}
-
-.hero p {
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-    font-size: 1.8em;
-    padding: 15px;
-    border-radius: 10px;
-    max-width: 70%;
-    margin-top: 10px;
-}
-
-.whatsapp-btn {
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-    display: inline-block;
-    background-color: #25D366;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.3s;
-    margin-top: 20px;
-}
-
-.whatsapp-btn:hover {
-    background-color: #1ebe57;
-}
-
-main {
-    min-width: 300px;
-    max-width: 1000px;
-    margin: auto;
-    margin-bottom: 30px;
-    padding: 20px;
-}
+/* Conheça nossa historia */
 
 .conteudo {
     background-color: var(--cor1);
@@ -250,11 +283,6 @@ main {
     border-radius: 20px;
     background-color: #f0f0f0;
     color: black;
-}
-
-article {
-    font-family: "Roboto";
-    margin-bottom: 60px;
 }
 
 .container {
@@ -285,6 +313,73 @@ article {
     height: auto;
     border-radius: 15px;
 }
+
+/* div botão no meio da pagina */
+
+.contato-advogado {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    background-color: var(--cor4);
+    color: var(--cor5);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.botao-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: white;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 15px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+}
+
+.botao-whatsapp i {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.contato-texto h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.contato-texto p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.botao-whatsapp:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 600px) {
+    .contato-advogado {
+        padding: 20px;
+    }
+
+    .botao-whatsapp {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+}
+
+/* sobre nós */
 
 .centro {
     font-size: 2em;
@@ -317,89 +412,7 @@ article {
     color: black;
 }
 
-aside {
-    font-family: "Roboto", sans-serif;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 15px;
-    color: black;
-    background-color: #f0f0f0;
-    margin-bottom: 20px;
-}
-
-aside > h2 {
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-/* div class contato */
-
-.contato-advogado {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    background-color: var(--cor4);
-    color: var(--cor5);
-    padding: 30px;
-    border-radius: 10px;
-    margin-top: 40px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.contato-texto h3 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
-.contato-texto p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.botao-whatsapp {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25D366;
-    color: white;
-    font-size: 1.3em;
-    font-weight: bold;
-    padding: 15px 20px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: 0.3s;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-}
-
-.botao-whatsapp i {
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-    font-size: 1.5em;
-    margin-right: 10px;
-}
-
-.botao-whatsapp:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.05);
-}
-
-@media screen and (max-width: 600px) {
-    .contato-advogado {
-        padding: 20px;
-    }
-
-    .botao-whatsapp {
-        font-size: 1.1em;
-        padding: 12px 15px;
-    }
-}
-
-/* section class contato */
+/* section class contato/mapa */
 
 .contato {
     font-family: "Roboto", sans-serif;
