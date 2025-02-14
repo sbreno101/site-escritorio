@@ -464,9 +464,8 @@ article {
 }
 
 .mapa {
-    flex: 1.5;
-    min-width: 400px;
-    max-width: 600px;
+    flex: 1;
+    max-width: 100%;
     height: 350px;
 }
 
@@ -474,6 +473,35 @@ article {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .contato {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info {
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .info-item {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .mapa {
+        width: 100%;
+        height: 250px;
+    }
 }
 
 /* footer */
