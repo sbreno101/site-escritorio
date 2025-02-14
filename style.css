@@ -20,10 +20,12 @@
 
 @media screen and (max-width: 900px) {
     header {
+        display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         padding: 15px 5%;
+        width: 100%;
     }
 
     header img {
@@ -35,16 +37,17 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
-        margin-top: 10px;
+        align-items: center;
         gap: 10px;
+        width: 100%;
+        padding-top: 10px;
     }
 
-    nav > a {
-        white-space: nowrap;
+    nav a {
         padding: 10px 15px;
         font-size: 1em;
         text-align: center;
+        white-space: nowrap;
     }
 }
 
@@ -125,12 +128,46 @@
 
     .advogado {
         width: 80%;
-        max-width: 280px;
+        max-width: 300px;
     }
 
     .advogado img {
         width: 100%;
-        max-width: 220px;
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        gap: 10px;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav > a {
+        padding: 10px 12px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 5px; 
+        overflow-x: auto;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 0.9em;
+        white-space: nowrap;
     }
 }
 
@@ -151,41 +188,39 @@ body {
 }
 
 header {
-    font-family: "Roboto", sans-serif;
-    background-color: white;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 10px 5%;
-    flex-wrap: nowrap;
+    align-items: center;
+    padding: 15px 5%;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 header img {
-    width: 160px;
+    width: 140px;
     height: auto;
-    max-width: 100%;
 }
 
 nav {
+    font-family: "Roboto", sans-serif;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
-    flex-wrap: nowrap;
+    gap: 1px;
+    flex-wrap: nowrap; 
 }
 
 nav > a {
     color: var(--cor6);
-    padding: 10px 15px;
+    padding: 8px 8px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition-duration: 0.5s;
-    font-size: 1.1em;
+    font-size: 1.2em;
     white-space: nowrap;
 }
+
 
 nav > a:hover {
     background-color: var(--cor0);
@@ -472,11 +507,11 @@ article {
 
 .advogado {
     text-align: center;
-    width: 30%;
+    width: clamp(200px, 30%, 300px);
 }
 
 .advogado img {
-    width: 100%;
+    width: 100%; 
     max-width: 250px;
     height: auto;
     border-radius: 10px;
