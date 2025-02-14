@@ -115,6 +115,23 @@
     }
 }
 
+@media screen and (max-width: 600px) {
+    .espaçamento {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .advogado {
+        width: 80%;
+        max-width: 280px;
+    }
+
+    .advogado img {
+        width: 100%;
+        max-width: 220px;
+    }
+}
+
 main {
     min-width: 300px;
     max-width: 1000px;
