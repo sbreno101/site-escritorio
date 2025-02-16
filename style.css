@@ -293,23 +293,33 @@ nav > a:hover {
 
 /* aside 1 enfrentando problemas */
 
+/* Estilização do aside (seção de destaque) */
 aside {
     font-family: "Roboto", sans-serif;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
-    color: black;
-    background-color: #f0f0f0;
-    margin-bottom: 20px;
+    color: #2C3E50; /* Azul escuro elegante */
+    background-color: #F8F9FA; /* Tom neutro refinado */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para profundidade */
+    margin-bottom: 25px;
 }
 
+/* Título principal do aside */
 aside > h2 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     text-align: center;
-    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1A252F; /* Tom ainda mais escuro para seriedade */
+    letter-spacing: 1.5px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #34495E; /* Linha destacada abaixo */
 }
 
+/* Container dos problemas */
 .container-problemas {
     display: flex;
     flex-wrap: wrap;
@@ -317,85 +327,106 @@ aside > h2 {
     gap: 40px;
 }
 
+/* Colunas dentro do container */
 .coluna {
     flex: 1;
     min-width: 300px;
 }
 
+/* Separador entre colunas */
 .separador {
     width: 4px;
-    background: linear-gradient(to bottom, #333, #777);
+    background: linear-gradient(to bottom, #2C3E50, #95A5A6);
     border-radius: 5px;
 }
 
+/* Container do título de cada categoria */
 .h3-container {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+/* Ícones ao lado dos títulos */
+.h3-container i {
+    font-size: 28px;
+    color: #34495E; /* Azul escuro mais sofisticado */
+}
+
+/* Títulos das categorias */
+
+@media (max-width: 768px) {
+    .separador {
+        width: 100%;
+        height: 4px;
+        margin: 20px 0;
+        background: linear-gradient(to right, #333, #777);
+    }
 }
 
 .h3-container h3 {
-    text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
-    font-size: clamp(1.3em, 1vw, 1.5em);
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #1A252F;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     margin: 0;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: inline-block;
     border-radius: 8px;
+    background: linear-gradient(to right, #EAECEE, #D5DBDB);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.h3-container i {
-    font-size: 24px;
-    color: #333;
-}
-
-.h3-container h3 {
-    font-size: 1.5em;
-    text-align: left;
-    margin: 0;
-}
-
+/* Container dos tópicos */
 .topico-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 30px;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
+/* Cada tópico individual */
 .topico {
     flex: 1;
-    min-width: 300px;
+    min-width: 280px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+    background-color: #F2F3F4;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
 }
 
+/* Efeito ao passar o mouse nos tópicos */
+.topico:hover {
+    background-color: #E5E8E8;
+    transform: scale(1.02);
+}
+
+/* Ícones dos tópicos */
 .topico i {
-    font-size: 22px;
-    color: #555;
+    font-size: 24px;
+    color: #566573;
 }
 
-.topico-content {
-    flex: 1;
-}
-
-.topico h4 {
-    font-size: 1.3em;
+/* Textos dos tópicos */
+.topico-content p {
+    font-size: 1.2em;
     font-weight: bold;
-    margin-bottom: 5px;
+    color: #2C3E50;
 }
 
-.topico p {
-    font-size: 1.1em;
-    text-align: justify;
-    margin-top: 5px;
-}
-
+/* Ajustes no <article> */
 article {
-    font-family: "Roboto";
+    font-family: "Roboto", sans-serif;
     margin-bottom: 60px;
 }
+
 
 /* Conheça nossa historia */
 
