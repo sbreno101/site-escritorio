@@ -7,7 +7,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>   
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const carousel = document.querySelector(".carousel");
+        const images = document.querySelectorAll(".carousel img");
+        const prev = document.querySelector(".prev");
+        const next = document.querySelector(".next");
+        let index = 0;
+    
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+    
+        function nextSlide() {
+            index = (index + 1) % images.length;
+            updateCarousel();
+        }
+    
+        function prevSlide() {
+            index = (index - 1 + images.length) % images.length;
+            updateCarousel();
+        }
+    
+        next.addEventListener("click", nextSlide);
+        prev.addEventListener("click", prevSlide);
+    
+        setInterval(nextSlide, 4000); // Troca automática a cada 4 segundos
+    });
+    </script>    
+<body>
     <header>
         <img src="arquivos/logo1.png" alt="logo">
         <nav>
@@ -139,6 +167,23 @@
             </div>
         </section>                        
     </main>
+    <h2 class="feedback-title">Feedback dos nossos clientes</h2>
+    <div class="feedback-carousel">
+        <button class="prev">&#10094;</button>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="arquivos/1.jpeg" alt="Avaliação 1">
+                <img src="arquivos/2.jpeg" alt="Avaliação 2">
+                <img src="arquivos/3.jpeg" alt="Avaliação 3">
+                <img src="arquivos/4.jpeg" alt="Avaliação 4">
+                <img src="arquivos/5.jpeg" alt="Avaliação 1">
+                <img src="arquivos/6.jpeg" alt="Avaliação 2">
+                <img src="arquivos/7.jpeg" alt="Avaliação 3">
+                <img src="arquivos/8.jpeg" alt="Avaliação 4">
+            </div>
+        </div>
+        <button class="next">&#10095;</button>
+    </div>        
     <footer>
         <div class="footer-container">
             <div class="footer-info">
