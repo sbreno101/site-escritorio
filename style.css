@@ -171,6 +171,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     min-width: 300px;
     max-width: 1000px;
@@ -276,7 +280,7 @@ nav > a:hover {
 .whatsapp-btn {
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
     display: inline-block;
-    background-color: #25D366;
+    background-color: var(--cor6);
     color: white;
     padding: 15px 30px;
     font-size: 1.2em;
@@ -288,7 +292,7 @@ nav > a:hover {
 }
 
 .whatsapp-btn:hover {
-    background-color: #1ebe57;
+    background-color: var(--cor2);
 }
 
 /* aside 1 enfrentando problemas */
@@ -482,7 +486,7 @@ article {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: #25D366;
+    background-color: var(--cor6);
     color: white;
     font-size: 1.3em;
     font-weight: bold;
@@ -511,7 +515,7 @@ article {
 }
 
 .botao-whatsapp:hover {
-    background-color: #1ebe5d;
+    background-color: var(--cor2);
     transform: scale(1.05);
 }
 
