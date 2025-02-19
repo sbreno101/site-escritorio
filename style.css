@@ -685,6 +685,7 @@ button:hover {
 /* footer */
 
 footer {
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
     background-color: var(--cor6);
     color: white;
     padding: 30px 5%;
@@ -692,7 +693,6 @@ footer {
 }
 
 .footer-container {
-    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
     font-family: "Roboto", sans-serif;
     display: flex;
     flex-wrap: wrap;
@@ -700,6 +700,10 @@ footer {
     align-items: center;
     max-width: 1000px;
     margin: auto;
+}
+
+.no-shadow {
+    text-shadow: none;
 }
 
 .footer-info {
